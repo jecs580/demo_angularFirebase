@@ -13,6 +13,9 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { ConexionService } from './services/conexion.service';
 import { ListaComponent } from './components/lista/lista.component';
 import { AdicionlistaComponent } from './components/adicionlista/adicionlista.component';
+import {FormsModule} from '@angular/forms'; // esta importacion fue colocada con ayuda de un
+// video en la documentacion de angular con se encuentra el como importar
+
 // Fin servicios
 @NgModule({
   declarations: [
@@ -21,6 +24,7 @@ import { AdicionlistaComponent } from './components/adicionlista/adicionlista.co
     AdicionlistaComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
